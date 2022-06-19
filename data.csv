@@ -1,5 +1,4 @@
-activity,description,time,date,productive
-1,winning,leveraging python to succeed,04 43 PM,06-10,no
-2,eating,,09:11 AM,06-11,no
-3,coding,,09:52 AM,06-11,yes
-4,abcd,test,11:22 AM,06-12,yes
+Date,Time,Activity,Description,Productive
+1,06-11,04 43 PM,coding,creating a time management script,yes
+2,06-18,10:08 AM,,,
+3,06-18,10:08 AM,leetcoding,,yes

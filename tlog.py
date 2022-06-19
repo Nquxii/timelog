@@ -2,8 +2,13 @@
 import argparse
 import pandas as pd
 import datetime as dt
+import os
 
 # A small script allowing for analyses of a user's time managment
+
+#CSV file
+logcsv = os.path.join(os.path.dirname(__file__), 'data.csv')
+
 # Create the parser
 my_parser = argparse.ArgumentParser(description='Log the user\'s current use of time in a csv file')
 
@@ -24,18 +29,18 @@ productivity = args.p
 time = dt.datetime.now().strftime('%I:%M %p')
 date = dt.datetime.today().strftime('%m-%d')
 
-existingData = pd.read_csv('data.csv', index_col=0)
+existingData = pd.read_csv(logcsv)
 
 # What kind of analyses would I want to perform on my time mgmt data?
 # time / effectiveness
 
 # The new document or "log" of user time
 newLog = pd.DataFrame({
-    "activity": [activity],
-    "description": [description],
-    "time": [time],
-    "date": [date],
-    "productive": [productivity],
+    "Date": [date],
+    "Time": [time],
+    "Activity": [activity],
+    "Description": [description],
+    "Productive": [productivity],
     },
 
     # Set the new index to +1 Append given user information to the csv file
@@ -43,6 +48,6 @@ newLog = pd.DataFrame({
 )
 
 # Append the new log of user data to the csv
-newLog.to_csv('data.csv', mode='a', header=False)
+newLog.to_csv(logcsv, mode='a', header=False)
 
 print(f'{activity} at {time} added to data.csv.')
