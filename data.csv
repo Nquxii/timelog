@@ -1,4 +1,3 @@
-Date,Time,Activity,Description,Productive
+Date,Time,Activity,Description,productive
 1,06-11,04 43 PM,coding,creating a time management script,yes
-2,06-18,10:08 AM,,,
-3,06-18,10:08 AM,leetcoding,,yes
+2,06-19,11:02 AM,coding timelog,using vim to code up a time log script,yes
